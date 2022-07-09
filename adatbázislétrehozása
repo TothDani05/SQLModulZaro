@@ -1,0 +1,35 @@
+*/message   CREATE TABLE `message` (
+   `ID` int(11) NOT NULL AUTO_INCREMENT,
+   `Subject` varchar(30) NOT NULL,
+   `Content` mediumtext NOT NULL,
+   `Attachments` text DEFAULT NULL,
+   PRIMARY KEY (`ID`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4
+  profile  CREATE TABLE `profile` (
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+   `address` varchar(100) NOT NULL,
+   `password` varchar(40) NOT NULL,
+   `is_active` int(11) NOT NULL,
+   `date_of_register` date NOT NULL DEFAULT current_timestamp(),
+   `name` varchar(100) NOT NULL,
+   PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4
+  sender_reciever  CREATE TABLE `sender_reciever` (
+   `Sender_id` int(100) NOT NULL,
+   `Reciever_id` int(100) NOT NULL,
+   `Message ID` int(11) NOT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+ /*ADATOK
+ INSERT INTO `profile`(id,name, address, password,is_active,date_of_register) VALUES (1, 'Messi', 'imbetter@xmail.com', 'whotfisronaldo123', 1, '2009-03-04')
+ INSERT INTO `profile`(id,name, address, password,is_active,date_of_register) VALUES (2, 'Lewandowski', 'topstriker9@xmail.com', 'ideservedthebaloondoor', 1, '2011-03-04')
+ INSERT INTO `profile`(id,name, address, password,is_active,date_of_register) VALUES (3, 'Ronaldo', 'sui@xmail.com', 'Vosotros', 1, '2012-03-04')
+
+ INSERT INTO `message`('ID','Subject','Content','Attachments') VALUES (1, 'Messi you stole the award', 'Dear Leo as you can clearly see the ceremony was rigged
+ and I deserved the balloon door Your Sincerely Lewa', NULL)
+
+ INSERT INTO `sender_reciever`(`Sender_id','Reciever_id','Message_id) VALUES (1, 2, 1)
+
+
+
+ */
